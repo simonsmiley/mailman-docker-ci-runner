@@ -15,6 +15,8 @@ You will have to add all tags that the mailman projects require. the list is as 
 | Project | Requirements |
 | :-----: | :----------: |
 | Postorius | sqlite |
+| Hyperkitty | sqlite, gcc |
+| Mailman core | sqlite, pgsql |
 
 When prompted for an executor use `docker`
 
