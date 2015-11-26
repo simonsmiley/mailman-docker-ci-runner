@@ -16,11 +16,11 @@ You will have to add all tags that the mailman projects require. the list is as 
 | :-----: | :----------: |
 | Postorius | sqlite |
 | Hyperkitty | sqlite, gcc |
-| Mailman core | sqlite, pgsql |
+| Mailman core | sqlite, postgres|
 
 When prompted for an executor use `docker`
 
-The Docker image name you need is `thelinuxguy/mailman-docker-ci-runner`
+The Docker image name you need is `thelinuxguy/mailman-docker-ci-runner:master`
 
 Continue pressing Return until the process finishes.
 

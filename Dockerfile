@@ -7,8 +7,8 @@ RUN useradd -ms /bin/bash runner
 RUN pacman -Syyu --noconfirm python-tox python2-tox \
     python-pip python2-pip git 
 
-# install gcc (for hyperkitty)
-RUN pacman -S --noconfirm gcc
+# install gcc (for hyperkitty) and postgres (for Mailman)
+RUN pacman -S --noconfirm gcc postgresql
 
 # install python3.4 (for Mailman)
 COPY python34-3.4.3-1-x86_64.pkg.tar.xz /tmp/
