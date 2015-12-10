@@ -7,8 +7,8 @@ RUN useradd -ms /bin/bash runner
 RUN pacman -Syyu --noconfirm python-tox python2-tox \
     python-pip python2-pip git 
 
-# install gcc (for hyperkitty) and postgres (for Mailman)
-RUN pacman -S --noconfirm gcc postgresql
+# install gcc (for hyperkitty) and postgresql-libs (for mailman)
+RUN pacman -S --noconfirm gcc postgresql-libs
 
 # install python3.4 (for Mailman)
 COPY python34-3.4.3-1-x86_64.pkg.tar.xz /tmp/
@@ -22,6 +22,8 @@ RUN curl -O "https://pypi.python.org/packages/source/p/pip/pip-7.1.2.tar.gz" && 
     cd pip-7.1.2 && python3.4 setup.py install
 RUN pip3.4 install tox
 
+# setup postgres
+COPY postgres.cfg /data/
 
 # empty caches
 RUN rm -rf /var/cache/pacman/pkg/* /tmp/*
