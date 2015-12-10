@@ -25,3 +25,15 @@ The Docker image name you need is `thelinuxguy/mailman-docker-ci-runner:master`
 Continue pressing Return until the process finishes.
 
 You are now set up, make sure that gitlab-ci-multi-runner is in fact running and issue a build through the gitlab ui
+
+# Changelog
+
+## 0.1
+
+* Initial release capable of running tests for postorius hyperkitty and Mailman
+* Has built in support for sqlite
+* Include client libraries for postgresql
+
+## 0.2
+
+* Add mysql client libraries
