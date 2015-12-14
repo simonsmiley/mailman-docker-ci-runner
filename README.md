@@ -37,3 +37,7 @@ You are now set up, make sure that gitlab-ci-multi-runner is in fact running and
 ## 0.2
 
 * Add mysql client libraries
+
+## 0.3
+
+* Switch to ubuntu
