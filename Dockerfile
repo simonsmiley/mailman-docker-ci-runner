@@ -15,5 +15,5 @@ COPY mysql.cfg postgres.cfg /home/runner/configs/
 RUN chown -R runner:runner /home/runner/configs
 
 # set working dir
-USER runner
-WORKDIR /home/runner
+#USER runner
+#WORKDIR /home/runner
